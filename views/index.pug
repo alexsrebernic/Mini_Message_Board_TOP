@@ -1,10 +1,14 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
-  each val in messages 
-    div 
-      h2= val.user 
-      p= val.text 
-      span= val.date 
+  div
+    h1= title
+    p Welcome to #{title}
+      div
+        a(href=`http://localhost:${process.env.PORT || 3000}/new`): button.compose= "Submit a message!"
+    each val in messages 
+      div 
+        h2= val.user 
+        h3= val.text
+        p= val.details 
+        span= val.date         

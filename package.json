@@ -2,6 +2,7 @@
   "name": "mini-message-board",
   "version": "0.0.0",
   "private": true,
+  "engines": {"node": "v16.13.1"},
   "scripts": {
     "start": "node ./bin/www",
     "devstart": "nodemon ./bin/www",
@@ -18,4 +19,5 @@
   "devDependencies": {
     "nodemon": "^2.0.15"
   }
+  
 }

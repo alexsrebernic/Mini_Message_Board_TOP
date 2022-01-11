@@ -1,8 +1,21 @@
-div 
-    form( method="POST" action='/new') 
-        div
-            input(type="text" name="messageUser" placeholder = "author")
-        div 
-            input(type="text" name="messageText" placeholder = "message")
-        div 
-        input(type="submit")
+extends layout 
+
+block content 
+    header 
+        h1= "Mini messageboard" 
+        p= 'Post a message, feel free!'
+    main 
+        section.form-container
+            div 
+                form( method="POST" action='/new') 
+                    div 
+                        input(type="text", name="text", placeholder = "title")
+                    div
+                        input(type="text", name="user", placeholder = "name")
+                    div 
+                        textarea(name="details", cols="30", rows="10") 
+                    div
+                    button(type="submit")= 'Post Message'
+                div 
+                    a(href="/")
+                        button="Go back" 
